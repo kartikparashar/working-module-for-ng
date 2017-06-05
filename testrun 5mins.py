@@ -56,11 +56,11 @@ tws.eConnect(host, port, clientId)
 print("connected")
 
 #historical
-
+contract_Details1 = create.create_contract("NG","FUT","NYMEX","USD",'','','20170628','10000')
 Id = random.randint(1, 1000)
 
 
-tws.reqHistoricalData(Id, contract_Details1, "20170605 13:30:00",
+tws.reqHistoricalData(Id, contract_Details1, "20170605 20:30:00",
                       '1 D',
                       '5 mins',
                       "TRADES",

@@ -70,7 +70,7 @@ contract_Details1 = create.create_contract("NG","FUT","NYMEX","USD",'','','20170
 Id = random.randint(1, 1000)
 
 
-tws.reqHistoricalData(Id, contract_Details1, "20170605 13:30:00",
+tws.reqHistoricalData(Id, contract_Details1, "20170605 20:30:00",
                       '1 D',
                       '5 mins',
                       "TRADES",
@@ -307,7 +307,7 @@ for i in range(times):
     # data.drop_duplicates('time', inplace=True)
     # data.replace('[]', np.nan)
     data['time'] = pd.to_datetime(data['time'], unit='s')
-    data = data.set_index(["time"]).tz_localize("UTC").tz_convert("Asia/Kolkata")
+    data = data.set_index(["time"]).tz_localize("UTC").tz_convert("EST")
     print(data)
     print(datetime.now())
 
